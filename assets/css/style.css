@@ -1,9 +1,4 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
+/* declaring most common colors on the page */
 :root {
     --white: #fff;
     --dark-blue: #13293d;
@@ -13,7 +8,7 @@
 body {
     background-color: var(--white);
 }
-
+/* properties for header.  */
 .header {
     display: block;
     padding: 5px;
@@ -31,13 +26,13 @@ body {
     font-size: 35px;
     margin-left: 20px;
 }
-
+/* Small easter egg  */
 .header h1 .ya:hover {
     box-shadow: inset 0px 0px 25px #66d2e5, 0 0 35px #66cee5;
     border-radius: 50px;
     color: var(--light-blue);
 }
-
+/* Using a hover state. Pseudo element */
 .main:hover,
 .side:hover {
     box-shadow: inset 0px 0px 25px #66d2e5, 0 0 35px #66cee5;
@@ -45,7 +40,7 @@ body {
     color: var(--light-blue);
 }
 
-
+/* setting up navbar and links to the right side */
 .header nav {
     position: relative;
     bottom: 20px;
@@ -71,17 +66,16 @@ a {
     text-decoration: none;
     text-decoration: 2px underline var(--white);
 }
-
+/* Example of linking the Mountain image from CSS */
 .subtitle-image {
     height: 200px;
     width: 100%;
-
     background-image: url("../images/AD72C20A-CF38-4E0D-9E08-195FF6B11C76_1_201_a.jpeg");
     border-radius: 0 0 15px 15px;
     background-size: cover;
     background-position: center;
 }
-
+/* Fancy header (h2) on the Mountain image*/
 .subtitle-image h2 {
     top: 150px;
     left: 810px;
@@ -94,64 +88,60 @@ a {
             rgba(66, 183, 194, 0.6) 100%);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+/* applying hover to the fancy header */
 .subtitle-image h2:hover {
     box-shadow: inset 0px 0px 25px #66d2e5, 0 0 35px #66cee5;
     color: var(--white);
 }
-
+/* Properties of the content section */
 .content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
 }
-
+/* Alignment of the one big image and four small */
 .card {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
+/* div where big image placed */
 .main-image {
     display: flex;
     justify-content: center;
     margin-top: 15px;
-
 }
-
+/* Properties of the big image */
 .main {
     width: 63%;
     border-radius: 15px;
 }
-
+/* div where four small images placed */
 .side-image {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     justify-content: center;
-
 }
-
+/* Properties of four small images */
 .side {
     margin: 15px;
     width: 30%;
     height: 168px;
     border-radius: 15px;
 }
-
+/* Properties of "About Me" section */
 .box1 {
     width: 100%;
     display: flex;
     background-color: var(--white);
 }
-
+/* Header of "About Me" section */
 .box1 h3 {
     border-right: 3px solid var(--dark-blue);
-    ;
     color: var(--dark-blue);
-    ;
     margin: 15px;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -159,9 +149,8 @@ a {
     width: 40%;
     text-align: right;
 }
-
+/* Paragraphs of "About Me" section */
 .para {
-
     padding: 5px;
     width: 100%;
 }
@@ -179,13 +168,13 @@ a {
     font-size: 15px;
     color: var(--dark-blue);
 }
-
+/* Properties of "Work" section */
 .box2 {
     width: 100%;
     display: flex;
     background-color: var(--white);
 }
-
+/* Header of "Work" section */
 .box2 h3 {
     border-right: 3px solid var(--dark-blue);
     color: var(--dark-blue);
@@ -196,13 +185,13 @@ a {
     width: 40%;
     text-align: right;
 }
-
+/* Properties of "Contact Me" section */
 .box3 {
     width: 100%;
     display: flex;
     background-color: var(--white);
 }
-
+/* Header of "Contact Me" section */
 .box3 h3 {
     border-right: 3px solid var(--dark-blue);
     color: var(--dark-blue);
@@ -213,13 +202,13 @@ a {
     width: 40%;
     text-align: right;
 }
-
+/* Content of "Contact Me" section */
 .contact {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-
+/* Links of "Contact Me" section */
 .connection {
     width: 100%;
     display: flex;
@@ -235,3 +224,27 @@ a {
     color: var(--dark-blue);
     text-decoration: none;
 }
+
+/* Examples of Media-Query
+ Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    header {
+      background: #6ceb5b;
+    }
+  }
+  
+  /* Large smartphones - navbar changes color */
+  @media screen and (max-width: 768px) {
+    nav ul li a {
+      background-color: #e34d12;
+    }
+  }
+  
+  /* Small smartphones - image placeholders change color */
+  @media screen and (max-width: 576px) {
+    .box1,
+    .box2,
+    .box3 {
+      background-color: #8ac4ff;
+    }
+  }
